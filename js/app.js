@@ -426,7 +426,7 @@ class MBTICareerApp {
         ctx.font = 'bold 48px Arial';
         ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
-        ctx.fillText('MBTI 직업 궁합', 400, 100);
+        ctx.fillText(i18n.t('canvas.title'), 400, 100);
 
         // MBTI 타입
         ctx.font = 'bold 120px Arial';
@@ -471,7 +471,7 @@ class MBTICareerApp {
     shareUrl() {
         const mbti = this.mbtiResult;
         const data = MBTI_DATA[mbti];
-        const text = `나의 MBTI 직업 궁합: ${mbti} - ${data.shortDesc} 🎯`;
+        const text = `${i18n.t('share.text')}: ${mbti} - ${data.shortDesc} 🎯`;
         const url = `${window.location.origin}?result=${mbti}`;
 
         // Web Share API
