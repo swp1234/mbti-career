@@ -154,7 +154,9 @@ async function initI18n() {
 
 // 페이지 로드 시 i18n 초기화
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initI18n);
+    document.addEventListener('DOMContentLoaded', () => {
+        try { initI18n(); } catch(e) { console.warn('i18n init error:', e); }
+    });
 } else {
-    initI18n();
+    try { initI18n(); } catch(e) { console.warn('i18n init error:', e); }
 }
