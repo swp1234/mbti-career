@@ -9,20 +9,21 @@ class MBTICareerApp {
         this.mbtiResult = null;
         this.premiumUnlocked = false;
 
-        this.init();
+        try {
+            this.init();
+        } catch(e) {
+            console.warn('App init error:', e);
+        }
     }
 
     init() {
         this.setupEventListeners();
         this.setupLanguageToggle();
         this.setupThemeToggle();
+        this.setupEngagementTracking();
 
-        // Hide app loader
-        const loader = document.getElementById('app-loader');
-        if (loader) {
-            loader.classList.add('hidden');
-            setTimeout(() => loader.remove(), 300);
-        }
+        // Check for shared result in URL
+        this.checkUrlResult();
     }
 
     setupEventListeners() {
@@ -538,6 +539,51 @@ class MBTICareerApp {
             document.getElementById('mbti-description').textContent = window.i18n.t(`mbti.${this.mbtiResult.toLowerCase()}`) || data.description;
             this.renderCareers(data.careers);
             this.renderTeamCompatibility(data.compatibility);
+        }
+    }
+
+    // Alias for i18n callback
+    updateCurrentScreen() {
+        this.updateDynamicContent();
+    }
+
+    // GA4 engagement tracking to reduce measured bounce rate
+    setupEngagementTracking() {
+        let scrollFired = false;
+        let timerFired = false;
+
+        // Fire engagement event on scroll (user actually interacted)
+        window.addEventListener('scroll', () => {
+            if (!scrollFired && window.scrollY > 100) {
+                scrollFired = true;
+                if (window.gtag) {
+                    gtag('event', 'scroll_engagement', { engagement_type: 'scroll' });
+                }
+            }
+        }, { passive: true });
+
+        // Fire engagement event after 5s on page (not a bounce)
+        setTimeout(() => {
+            if (!timerFired) {
+                timerFired = true;
+                if (window.gtag) {
+                    gtag('event', 'timer_engagement', { engagement_time_msec: 5000 });
+                }
+            }
+        }, 5000);
+    }
+
+    // Check URL for shared result parameter
+    checkUrlResult() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const result = params.get('result');
+            if (result && MBTI_DATA[result.toUpperCase()]) {
+                this.testMode = 'shared';
+                this.displayResults(result.toUpperCase());
+            }
+        } catch(e) {
+            // URL parsing error, ignore
         }
     }
 }

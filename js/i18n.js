@@ -143,20 +143,41 @@ class I18n {
     }
 }
 
-// 글로벌 i18n 인스턴스
-window.i18n = new I18n();
+// i18n IIFE with try-catch-finally to guarantee app-loader removal
+;(function() {
+    function hideLoader() {
+        try {
+            var loader = document.getElementById('app-loader');
+            if (loader) {
+                loader.classList.add('hidden');
+                setTimeout(function() { try { loader.remove(); } catch(e) {} }, 400);
+            }
+        } catch(e) { /* loader hide must never throw */ }
+    }
 
-// 초기화 함수
-async function initI18n() {
-    await window.i18n.loadTranslations(window.i18n.currentLang);
-    window.i18n.updateUI();
-}
+    try {
+        window.i18n = new I18n();
+    } catch(e) {
+        console.warn('i18n constructor error:', e);
+        window.i18n = { t: function(k, d) { return d || k; }, setLanguage: function() {}, currentLang: 'ko', updateUI: function() {}, loadTranslations: function() { return Promise.resolve({}); } };
+    }
 
-// 페이지 로드 시 i18n 초기화
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        try { initI18n(); } catch(e) { console.warn('i18n init error:', e); }
-    });
-} else {
-    try { initI18n(); } catch(e) { console.warn('i18n init error:', e); }
-}
+    async function initI18n() {
+        try {
+            await window.i18n.loadTranslations(window.i18n.currentLang);
+            window.i18n.updateUI();
+        } catch(e) {
+            console.warn('i18n init error:', e);
+        } finally {
+            hideLoader();
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initI18n();
+        });
+    } else {
+        initI18n();
+    }
+})();
