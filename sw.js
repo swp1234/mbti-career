@@ -1,6 +1,6 @@
 // Service Worker for MBTI Career Test PWA
 
-const CACHE_NAME = 'mbti-career-v1';
+const CACHE_NAME = 'mbti-career-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -51,42 +51,27 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event - cache first, fallback to network
+// Fetch event - network first, fallback to cache
 self.addEventListener('fetch', event => {
-  const { request } = event;
-  const url = new URL(request.url);
+  if (event.request.method !== 'GET') return;
 
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
-    return;
-  }
+  // Skip external requests (ads, analytics, etc.)
+  if (!event.request.url.startsWith(self.location.origin)) return;
 
   event.respondWith(
-    caches.match(request)
+    fetch(event.request)
       .then(response => {
-        if (response) {
-          return response;
-        }
-
-        return fetch(request)
-          .then(response => {
-            // Only cache successful responses
-            if (!response || response.status !== 200 || response.type === 'error') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-            caches.open(CACHE_NAME)
-              .then(cache => cache.put(request, responseToCache));
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page or cached response
-            return caches.match(request)
-              .then(response => response || new Response('Offline'));
+        if (response && response.status === 200) {
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, responseToCache);
           });
+        }
+        return response;
+      })
+      .catch(() => {
+        return caches.match(event.request)
+          .then(cached => cached || caches.match('./index.html'));
       })
   );
 });
