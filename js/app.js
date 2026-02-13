@@ -109,6 +109,10 @@ class MBTICareerApp {
         this.currentQuestion = 0;
         this.showScreen('test');
         this.renderQuestion();
+        // GA4 engagement on first interaction
+        if (typeof gtag === 'function') {
+            gtag('event', 'engagement', { event_category: 'mbti_career', event_label: 'first_interaction' });
+        }
     }
 
     // 직접 선택 시작
@@ -116,6 +120,10 @@ class MBTICareerApp {
         this.testMode = 'direct';
         this.showScreen('select');
         this.renderMBTIGrid();
+        // GA4 engagement on first interaction
+        if (typeof gtag === 'function') {
+            gtag('event', 'engagement', { event_category: 'mbti_career', event_label: 'first_interaction' });
+        }
     }
 
     // 테스트 질문 렌더링
