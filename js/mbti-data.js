@@ -8,18 +8,18 @@ const MBTI_DATA = {
         description: 'The Logistician - 논리적이고 체계적인 조직가',
         shortDesc: '책임감 있고 신뢰할 수 있는 리더',
         strengths: [
-            { label: '책임감', score: 95 },
-            { label: '체계성', score: 90 },
-            { label: '신뢰성', score: 95 },
-            { label: '분석력', score: 85 },
-            { label: '실행력', score: 90 }
+            { labelKey: 'responsibility', label: 'Responsibility', score: 95 },
+            { labelKey: 'systematic', label: 'Systematic', score: 90 },
+            { labelKey: 'reliability', label: 'Reliability', score: 95 },
+            { labelKey: 'analysis', label: 'Analysis', score: 85 },
+            { labelKey: 'execution', label: 'Execution', score: 90 }
         ],
         weaknesses: [
-            { label: '유연성', score: 40 },
-            { label: '창의성', score: 45 },
-            { label: '감정표현', score: 35 },
-            { label: '즉흥성', score: 30 },
-            { label: '변화수용', score: 45 }
+            { labelKey: 'flexibility', label: 'Flexibility', score: 40 },
+            { labelKey: 'creativity', label: 'Creativity', score: 45 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 35 },
+            { labelKey: 'spontaneity', label: 'Spontaneity', score: 30 },
+            { labelKey: 'adaptability', label: 'Adaptability', score: 45 }
         ],
         careers: [
             { rank: 1, name: 'Accountant', category: 'Finance', description: 'Financial records관리 및 감사', rating: 5 },
@@ -45,18 +45,18 @@ const MBTI_DATA = {
         description: 'The Defender - 헌신적이고 책임감 있는 보호자',
         shortDesc: '따뜻하고 신뢰할 수 있는 지원자',
         strengths: [
-            { label: '공감능력', score: 95 },
-            { label: '책임감', score: 90 },
-            { label: '신뢰성', score: 95 },
-            { label: '세심함', score: 90 },
-            { label: '헌신성', score: 95 }
+            { labelKey: 'empathy', label: 'Empathy', score: 95 },
+            { labelKey: 'responsibility', label: 'Responsibility', score: 90 },
+            { labelKey: 'reliability', label: 'Reliability', score: 95 },
+            { labelKey: 'attentiveness', label: 'Attentiveness', score: 90 },
+            { labelKey: 'dedication', label: 'Dedication', score: 95 }
         ],
         weaknesses: [
-            { label: '자기주장', score: 35 },
-            { label: '변화수용', score: 45 },
-            { label: '창의성', score: 50 },
-            { label: '비판적사고', score: 45 },
-            { label: '리스크', score: 40 }
+            { labelKey: 'assertiveness', label: 'Assertiveness', score: 35 },
+            { labelKey: 'adaptability', label: 'Adaptability', score: 45 },
+            { labelKey: 'creativity', label: 'Creativity', score: 50 },
+            { labelKey: 'criticalThinking', label: 'Critical Thinking', score: 45 },
+            { labelKey: 'riskTaking', label: 'Risk-taking', score: 40 }
         ],
         careers: [
             { rank: 1, name: 'Nurse', category: 'Healthcare', description: '환자 돌봄 및 의료 지원', rating: 5 },
@@ -82,18 +82,18 @@ const MBTI_DATA = {
         description: 'The Advocate - 통찰력 있는 이상주의자',
         shortDesc: '비전을 가진 영감의 리더',
         strengths: [
-            { label: '통찰력', score: 95 },
-            { label: '공감능력', score: 90 },
-            { label: '창의성', score: 85 },
-            { label: '헌신성', score: 90 },
-            { label: '리더십', score: 85 }
+            { labelKey: 'insight', label: 'Insight', score: 95 },
+            { labelKey: 'empathy', label: 'Empathy', score: 90 },
+            { labelKey: 'creativity', label: 'Creativity', score: 85 },
+            { labelKey: 'dedication', label: 'Dedication', score: 90 },
+            { labelKey: 'leadership', label: 'Leadership', score: 85 }
         ],
         weaknesses: [
-            { label: '현실성', score: 45 },
-            { label: '대면충돌', score: 40 },
-            { label: '유연성', score: 50 },
-            { label: '실무적극성', score: 55 },
-            { label: '스트레스관리', score: 50 }
+            { labelKey: 'practicality', label: 'Practicality', score: 45 },
+            { labelKey: 'confrontation', label: 'Confrontation', score: 40 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 50 },
+            { labelKey: 'proactiveness', label: 'Proactiveness', score: 55 },
+            { labelKey: 'stressManagement', label: 'Stress Management', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Psychologist', category: 'Psychology', description: '심리 분석 및 치료', rating: 5 },
@@ -119,18 +119,18 @@ const MBTI_DATA = {
         description: 'The Architect - 전략적이고 창의로운 설계자',
         shortDesc: '비전을 실현하는 전략가',
         strengths: [
-            { label: '전략성', score: 95 },
-            { label: '창의성', score: 90 },
-            { label: '분석력', score: 95 },
-            { label: '독립성', score: 90 },
-            { label: '장기비전', score: 95 }
+            { labelKey: 'strategy', label: 'Strategy', score: 95 },
+            { labelKey: 'creativity', label: 'Creativity', score: 90 },
+            { labelKey: 'analysis', label: 'Analysis', score: 95 },
+            { labelKey: 'independence', label: 'Independence', score: 90 },
+            { labelKey: 'longTermVision', label: 'Long-term Vision', score: 95 }
         ],
         weaknesses: [
-            { label: '인간관계', score: 40 },
-            { label: '감정표현', score: 35 },
-            { label: '현실성', score: 50 },
-            { label: '유연성', score: 40 },
-            { label: '단기실행', score: 45 }
+            { labelKey: 'relationships', label: 'Relationships', score: 40 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 35 },
+            { labelKey: 'practicality', label: 'Practicality', score: 50 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 40 },
+            { labelKey: 'shortTermExecution', label: 'Short-term Execution', score: 45 }
         ],
         careers: [
             { rank: 1, name: 'Architect', category: 'Design', description: '건축물 설계 및 구현', rating: 5 },
@@ -156,18 +156,18 @@ const MBTI_DATA = {
         description: 'The Virtuoso - 실용적이고 유연한 문제해결사',
         shortDesc: '손으로 만드는 실용가',
         strengths: [
-            { label: '실무능력', score: 95 },
-            { label: '문제해결', score: 90 },
-            { label: '분석력', score: 85 },
-            { label: '유연성', score: 90 },
-            { label: '독립성', score: 85 }
+            { labelKey: 'practicalSkills', label: 'Practical Skills', score: 95 },
+            { labelKey: 'problemSolving', label: 'Problem Solving', score: 90 },
+            { labelKey: 'analysis', label: 'Analysis', score: 85 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 90 },
+            { labelKey: 'independence', label: 'Independence', score: 85 }
         ],
         weaknesses: [
-            { label: '계획성', score: 40 },
-            { label: '감정표현', score: 35 },
-            { label: '공감능력', score: 40 },
-            { label: '장기계획', score: 45 },
-            { label: '이론학습', score: 50 }
+            { labelKey: 'planning', label: 'Planning', score: 40 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 35 },
+            { labelKey: 'empathy', label: 'Empathy', score: 40 },
+            { labelKey: 'longTermPlanning', label: 'Long-term Planning', score: 45 },
+            { labelKey: 'theoreticalLearning', label: 'Theoretical Learning', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Mechanic', category: 'Trade', description: '기계 수리 및 유지보수', rating: 5 },
@@ -193,18 +193,18 @@ const MBTI_DATA = {
         description: 'The Adventurer - 감각적이고 친절한 예술가',
         shortDesc: '현재를 즐기는 창의적 영혼',
         strengths: [
-            { label: '창의성', score: 90 },
-            { label: '감각성', score: 95 },
-            { label: '친절함', score: 90 },
-            { label: '유연성', score: 85 },
-            { label: '미적감각', score: 95 }
+            { labelKey: 'creativity', label: 'Creativity', score: 90 },
+            { labelKey: 'sensing', label: 'Sensing', score: 95 },
+            { labelKey: 'kindness', label: 'Kindness', score: 90 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 85 },
+            { labelKey: 'aesthetic', label: 'Aesthetic', score: 95 }
         ],
         weaknesses: [
-            { label: '계획성', score: 40 },
-            { label: '비판성', score: 45 },
-            { label: '장기비전', score: 50 },
-            { label: '충돌대처', score: 45 },
-            { label: '이론학습', score: 50 }
+            { labelKey: 'planning', label: 'Planning', score: 40 },
+            { labelKey: 'criticism', label: 'Criticism', score: 45 },
+            { labelKey: 'longTermVision', label: 'Long-term Vision', score: 50 },
+            { labelKey: 'conflictHandling', label: 'Conflict Handling', score: 45 },
+            { labelKey: 'theoreticalLearning', label: 'Theoretical Learning', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Artist', category: 'Creative', description: '예술 창작 및 표현', rating: 5 },
@@ -230,18 +230,18 @@ const MBTI_DATA = {
         description: 'The Mediator - 이상주의적이고 창의로운 중재자',
         shortDesc: '깊은 감정의 창의적 혼',
         strengths: [
-            { label: '창의성', score: 90 },
-            { label: '공감능력', score: 95 },
-            { label: '이상주의', score: 90 },
-            { label: '개성', score: 90 },
-            { label: '감정표현', score: 85 }
+            { labelKey: 'creativity', label: 'Creativity', score: 90 },
+            { labelKey: 'empathy', label: 'Empathy', score: 95 },
+            { labelKey: 'idealism', label: 'Idealism', score: 90 },
+            { labelKey: 'individuality', label: 'Individuality', score: 90 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 85 }
         ],
         weaknesses: [
-            { label: '현실성', score: 40 },
-            { label: '비판적사고', score: 45 },
-            { label: '조직성', score: 35 },
-            { label: '충돌처리', score: 50 },
-            { label: '자기주장', score: 50 }
+            { labelKey: 'practicality', label: 'Practicality', score: 40 },
+            { labelKey: 'criticalThinking', label: 'Critical Thinking', score: 45 },
+            { labelKey: 'organization', label: 'Organization', score: 35 },
+            { labelKey: 'conflictResolution', label: 'Conflict Resolution', score: 50 },
+            { labelKey: 'assertiveness', label: 'Assertiveness', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Writer', category: 'Creative', description: '창작 글쓰기 및 표현', rating: 5 },
@@ -267,18 +267,18 @@ const MBTI_DATA = {
         description: 'The Logician - 논리적이고 혁신적인 사상가',
         shortDesc: '끝없는 탐구의 천재',
         strengths: [
-            { label: '분석력', score: 95 },
-            { label: '창의성', score: 90 },
-            { label: '논리성', score: 95 },
-            { label: '독립성', score: 90 },
-            { label: '기술성', score: 85 }
+            { labelKey: 'analysis', label: 'Analysis', score: 95 },
+            { labelKey: 'creativity', label: 'Creativity', score: 90 },
+            { labelKey: 'logic', label: 'Logic', score: 95 },
+            { labelKey: 'independence', label: 'Independence', score: 90 },
+            { labelKey: 'technicalSkills', label: 'Technical Skills', score: 85 }
         ],
         weaknesses: [
-            { label: '실행력', score: 35 },
-            { label: '감정표현', score: 35 },
-            { label: '조직성', score: 40 },
-            { label: '사회성', score: 45 },
-            { label: '현실성', score: 50 }
+            { labelKey: 'execution', label: 'Execution', score: 35 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 35 },
+            { labelKey: 'organization', label: 'Organization', score: 40 },
+            { labelKey: 'sociability', label: 'Sociability', score: 45 },
+            { labelKey: 'practicality', label: 'Practicality', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Software Engineer', category: 'IT', description: '혁신적 소프트웨어 개발', rating: 5 },
@@ -304,18 +304,18 @@ const MBTI_DATA = {
         description: 'The Supervisor - 효율적이고 결정력 있는 리더',
         shortDesc: '강력한 리더십의 실행가',
         strengths: [
-            { label: '리더십', score: 95 },
-            { label: '조직성', score: 95 },
-            { label: '실행력', score: 95 },
-            { label: '책임감', score: 90 },
-            { label: '결정력', score: 95 }
+            { labelKey: 'leadership', label: 'Leadership', score: 95 },
+            { labelKey: 'organization', label: 'Organization', score: 95 },
+            { labelKey: 'execution', label: 'Execution', score: 95 },
+            { labelKey: 'responsibility', label: 'Responsibility', score: 90 },
+            { labelKey: 'decisionMaking', label: 'Decision-making', score: 95 }
         ],
         weaknesses: [
-            { label: '유연성', score: 40 },
-            { label: '감정표현', score: 45 },
-            { label: '창의성', score: 50 },
-            { label: '감정이해', score: 45 },
-            { label: '변화수용', score: 50 }
+            { labelKey: 'flexibility', label: 'Flexibility', score: 40 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 45 },
+            { labelKey: 'creativity', label: 'Creativity', score: 50 },
+            { labelKey: 'emotionalUnderstanding', label: 'Emotional Understanding', score: 45 },
+            { labelKey: 'adaptability', label: 'Adaptability', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'CEO', category: 'Management', description: '회사 전반 리더십', rating: 5 },
@@ -341,18 +341,18 @@ const MBTI_DATA = {
         description: 'The Consul - 사교적이고 배려하는 주최자',
         shortDesc: '따뜻한 인간관계의 중심',
         strengths: [
-            { label: '공감능력', score: 95 },
-            { label: '사교성', score: 95 },
-            { label: '책임감', score: 90 },
-            { label: '조직성', score: 85 },
-            { label: '협력성', score: 95 }
+            { labelKey: 'empathy', label: 'Empathy', score: 95 },
+            { labelKey: 'sociability', label: 'Sociability', score: 95 },
+            { labelKey: 'responsibility', label: 'Responsibility', score: 90 },
+            { labelKey: 'organization', label: 'Organization', score: 85 },
+            { labelKey: 'cooperation', label: 'Cooperation', score: 95 }
         ],
         weaknesses: [
-            { label: '자기주장', score: 45 },
-            { label: '비판적사고', score: 50 },
-            { label: '창의성', score: 50 },
-            { label: '변화수용', score: 55 },
-            { label: '스트레스관리', score: 50 }
+            { labelKey: 'assertiveness', label: 'Assertiveness', score: 45 },
+            { labelKey: 'criticalThinking', label: 'Critical Thinking', score: 50 },
+            { labelKey: 'creativity', label: 'Creativity', score: 50 },
+            { labelKey: 'adaptability', label: 'Adaptability', score: 55 },
+            { labelKey: 'stressManagement', label: 'Stress Management', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Human Resources Manager', category: 'HR', description: '직원 관리 및 개발', rating: 5 },
@@ -378,18 +378,18 @@ const MBTI_DATA = {
         description: 'The Protagonist - 열정적이고 영감의 지도자',
         shortDesc: '사람을 움직이는 카리스마 리더',
         strengths: [
-            { label: '리더십', score: 95 },
-            { label: '공감능력', score: 90 },
-            { label: '카리스마', score: 95 },
-            { label: '소통능력', score: 95 },
-            { label: '영감력', score: 90 }
+            { labelKey: 'leadership', label: 'Leadership', score: 95 },
+            { labelKey: 'empathy', label: 'Empathy', score: 90 },
+            { labelKey: 'charisma', label: 'Charisma', score: 95 },
+            { labelKey: 'communication', label: 'Communication', score: 95 },
+            { labelKey: 'inspiration', label: 'Inspiration', score: 90 }
         ],
         weaknesses: [
-            { label: '객관성', score: 45 },
-            { label: '비판적사고', score: 50 },
-            { label: '변화수용', score: 55 },
-            { label: '스트레스관리', score: 50 },
-            { label: '자기중심', score: 60 }
+            { labelKey: 'objectivity', label: 'Objectivity', score: 45 },
+            { labelKey: 'criticalThinking', label: 'Critical Thinking', score: 50 },
+            { labelKey: 'adaptability', label: 'Adaptability', score: 55 },
+            { labelKey: 'stressManagement', label: 'Stress Management', score: 50 },
+            { labelKey: 'selfCenteredness', label: 'Self-centeredness', score: 60 }
         ],
         careers: [
             { rank: 1, name: 'Executive Coach', category: 'Development', description: '리더 코칭 및 개발', rating: 5 },
@@ -415,18 +415,18 @@ const MBTI_DATA = {
         description: 'The Commander - 전략적이고 강하의 지휘관',
         shortDesc: '승리의 전략가',
         strengths: [
-            { label: '리더십', score: 95 },
-            { label: '전략성', score: 95 },
-            { label: '결정력', score: 95 },
-            { label: '논리성', score: 90 },
-            { label: '야심', score: 95 }
+            { labelKey: 'leadership', label: 'Leadership', score: 95 },
+            { labelKey: 'strategy', label: 'Strategy', score: 95 },
+            { labelKey: 'decisionMaking', label: 'Decision-making', score: 95 },
+            { labelKey: 'logic', label: 'Logic', score: 90 },
+            { labelKey: 'ambition', label: 'Ambition', score: 95 }
         ],
         weaknesses: [
-            { label: '감정표현', score: 35 },
-            { label: '유연성', score: 40 },
-            { label: '감정이해', score: 45 },
-            { label: '현재중심', score: 50 },
-            { label: '일과생활균형', score: 40 }
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 35 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 40 },
+            { labelKey: 'emotionalUnderstanding', label: 'Emotional Understanding', score: 45 },
+            { labelKey: 'presentFocus', label: 'Present Focus', score: 50 },
+            { labelKey: 'workLifeBalance', label: 'Work-life Balance', score: 40 }
         ],
         careers: [
             { rank: 1, name: 'CEO', category: 'Management', description: '회사 전략 리더십', rating: 5 },
@@ -452,18 +452,18 @@ const MBTI_DATA = {
         description: 'The Entrepreneur - 역동적이고 도전적인 사업가',
         shortDesc: '즉흥적 액션의 도전가',
         strengths: [
-            { label: '행동력', score: 95 },
-            { label: '유연성', score: 95 },
-            { label: '문제해결', score: 90 },
-            { label: '설득력', score: 85 },
-            { label: '위험감수', score: 90 }
+            { labelKey: 'action', label: 'Action', score: 95 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 95 },
+            { labelKey: 'problemSolving', label: 'Problem Solving', score: 90 },
+            { labelKey: 'persuasion', label: 'Persuasion', score: 85 },
+            { labelKey: 'riskTaking', label: 'Risk-taking', score: 90 }
         ],
         weaknesses: [
-            { label: '장기계획', score: 40 },
-            { label: '감정표현', score: 45 },
-            { label: '정중함', score: 50 },
-            { label: '인내력', score: 55 },
-            { label: '세부집중', score: 45 }
+            { labelKey: 'longTermPlanning', label: 'Long-term Planning', score: 40 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 45 },
+            { labelKey: 'politeness', label: 'Politeness', score: 50 },
+            { labelKey: 'perseverance', label: 'Perseverance', score: 55 },
+            { labelKey: 'detailFocus', label: 'Detail Focus', score: 45 }
         ],
         careers: [
             { rank: 1, name: 'Entrepreneur', category: 'Business', description: '새로운 사업 시작', rating: 5 },
@@ -489,18 +489,18 @@ const MBTI_DATA = {
         description: 'The Entertainer - 활발하고 즐거운 공연가',
         shortDesc: '삶을 즐기는 무대의 별',
         strengths: [
-            { label: '사교성', score: 95 },
-            { label: '에너지', score: 95 },
-            { label: '유연성', score: 90 },
-            { label: '감정표현', score: 95 },
-            { label: '감각성', score: 90 }
+            { labelKey: 'sociability', label: 'Sociability', score: 95 },
+            { labelKey: 'energy', label: 'Energy', score: 95 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 90 },
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 95 },
+            { labelKey: 'sensing', label: 'Sensing', score: 90 }
         ],
         weaknesses: [
-            { label: '장기계획', score: 35 },
-            { label: '조직성', score: 40 },
-            { label: '분석력', score: 50 },
-            { label: '심각성', score: 50 },
-            { label: '세부집중', score: 45 }
+            { labelKey: 'longTermPlanning', label: 'Long-term Planning', score: 35 },
+            { labelKey: 'organization', label: 'Organization', score: 40 },
+            { labelKey: 'analysis', label: 'Analysis', score: 50 },
+            { labelKey: 'seriousness', label: 'Seriousness', score: 50 },
+            { labelKey: 'detailFocus', label: 'Detail Focus', score: 45 }
         ],
         careers: [
             { rank: 1, name: 'Entertainer', category: 'Entertainment', description: '무대 공연 및 엔터테인먼트', rating: 5 },
@@ -526,18 +526,18 @@ const MBTI_DATA = {
         description: 'The Campaigner - 열정적이고 창의로운 활동가',
         shortDesc: '열정과 영감의 변화 주도자',
         strengths: [
-            { label: '창의성', score: 95 },
-            { label: '열정', score: 95 },
-            { label: '사교성', score: 90 },
-            { label: '직관력', score: 90 },
-            { label: '유연성', score: 90 }
+            { labelKey: 'creativity', label: 'Creativity', score: 95 },
+            { labelKey: 'passion', label: 'Passion', score: 95 },
+            { labelKey: 'sociability', label: 'Sociability', score: 90 },
+            { labelKey: 'intuition', label: 'Intuition', score: 90 },
+            { labelKey: 'flexibility', label: 'Flexibility', score: 90 }
         ],
         weaknesses: [
-            { label: '조직성', score: 40 },
-            { label: '계획성', score: 45 },
-            { label: '세부집중', score: 45 },
-            { label: '인내력', score: 50 },
-            { label: '자기통제', score: 55 }
+            { labelKey: 'organization', label: 'Organization', score: 40 },
+            { labelKey: 'planning', label: 'Planning', score: 45 },
+            { labelKey: 'detailFocus', label: 'Detail Focus', score: 45 },
+            { labelKey: 'perseverance', label: 'Perseverance', score: 50 },
+            { labelKey: 'selfControl', label: 'Self-control', score: 55 }
         ],
         careers: [
             { rank: 1, name: 'Content Creator', category: 'Media', description: '창의적 콘텐츠 제작', rating: 5 },
@@ -563,18 +563,18 @@ const MBTI_DATA = {
         description: 'The Debater - 지능적이고 도전적인 논자',
         shortDesc: '변론의 천재 개혁자',
         strengths: [
-            { label: '창의성', score: 90 },
-            { label: '논리성', score: 90 },
-            { label: '분석력', score: 90 },
-            { label: '설득력', score: 85 },
-            { label: '독립성', score: 85 }
+            { labelKey: 'creativity', label: 'Creativity', score: 90 },
+            { labelKey: 'logic', label: 'Logic', score: 90 },
+            { labelKey: 'analysis', label: 'Analysis', score: 90 },
+            { labelKey: 'persuasion', label: 'Persuasion', score: 85 },
+            { labelKey: 'independence', label: 'Independence', score: 85 }
         ],
         weaknesses: [
-            { label: '감정표현', score: 40 },
-            { label: '조직성', score: 45 },
-            { label: '장기계획', score: 50 },
-            { label: '인내력', score: 55 },
-            { label: '집중력', score: 50 }
+            { labelKey: 'emotionalExpression', label: 'Emotional Expression', score: 40 },
+            { labelKey: 'organization', label: 'Organization', score: 45 },
+            { labelKey: 'longTermPlanning', label: 'Long-term Planning', score: 50 },
+            { labelKey: 'perseverance', label: 'Perseverance', score: 55 },
+            { labelKey: 'focus', label: 'Focus', score: 50 }
         ],
         careers: [
             { rank: 1, name: 'Inventor', category: 'Innovation', description: '새로운 기술 발명', rating: 5 },

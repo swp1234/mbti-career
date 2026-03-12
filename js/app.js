@@ -334,7 +334,7 @@ class MBTICareerApp {
             text.setAttribute('dominant-baseline', 'middle');
             text.setAttribute('fill', 'rgba(255, 255, 255, 0.7)');
             text.setAttribute('font-size', '10');
-            text.textContent = window.i18n.t(`strength.${item.label}`) || item.label;
+            text.textContent = window.i18n?.t(`strength.${item.labelKey}`) || item.label;
             svg.appendChild(text);
         });
 
