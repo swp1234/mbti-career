@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "Моя MBTI профессиональная совместимость"
+  },
+  "result": {
+    "moreTests": "Другие тесты"
+  },
+  "related": {
+    "mbtiLove": "MBTI Любовь",
+    "workStyle": "Стиль работы",
+    "mbtiCoffee": "MBTI Кофе",
+    "brainType": "Тип мозга"
   }
 }

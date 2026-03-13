@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "Kompatibilitas Karir MBTI Saya"
+  },
+  "result": {
+    "moreTests": "Jelajahi tes lainnya"
+  },
+  "related": {
+    "mbtiLove": "MBTI Cinta",
+    "workStyle": "Gaya Kerja",
+    "mbtiCoffee": "MBTI Kopi",
+    "brainType": "Tipe Otak"
   }
 }

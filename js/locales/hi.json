@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "मेरी MBTI कैरियर संगति"
+  },
+  "result": {
+    "moreTests": "और टेस्ट देखें"
+  },
+  "related": {
+    "mbtiLove": "MBTI प्रेम",
+    "workStyle": "कार्य शैली",
+    "mbtiCoffee": "MBTI कॉफी",
+    "brainType": "मस्तिष्क प्रकार"
   }
 }

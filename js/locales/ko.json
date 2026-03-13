@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "나의 MBTI 직업 궁합"
+  },
+  "result": {
+    "moreTests": "더 많은 테스트"
+  },
+  "related": {
+    "mbtiLove": "MBTI 연애",
+    "workStyle": "업무 스타일",
+    "mbtiCoffee": "MBTI 커피",
+    "brainType": "두뇌 유형"
   }
 }

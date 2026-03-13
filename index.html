@@ -264,19 +264,25 @@
                     <button id="share-url-btn" class="btn btn-secondary" data-i18n="results.shareLink">🔗 결과 공유</button>
                 </div>
 
-                <!-- Related Apps -->
-                <div class="related-section">
-                    <h3 data-i18n="results.relatedApps">당신도 좋아할 다른 앱</h3>
-                    <div class="related-apps">
-                        <a href="https://dopabrain.com/mbti-tips/" class="related-card" data-i18n-hover="MBTI 궁합 & 팁">
-                            <div class="related-icon">🧩</div>
-                            <div class="related-name" data-i18n="app.mbtiTips">MBTI 궁합 & 팁</div>
-                            <div class="related-desc" data-i18n="app.mbtiTipsDesc">성격 유형별 궁합</div>
+                <!-- Related Tests -->
+                <div class="related-tests">
+                    <h3 data-i18n="result.moreTests">Explore More Tests</h3>
+                    <div class="related-grid">
+                        <a href="/mbti-love/" class="related-card" style="--card-color: #ff6b9d">
+                            <span class="related-emoji">💑</span>
+                            <span class="related-name" data-i18n="related.mbtiLove">MBTI Love</span>
                         </a>
-                        <a href="https://dopabrain.com/emotion-temp/" class="related-card" data-i18n-hover="감정 온도계 테스트">
-                            <div class="related-icon">🌡️</div>
-                            <div class="related-name" data-i18n="app.emotionTemp">감정 온도계</div>
-                            <div class="related-desc" data-i18n="app.emotionTempDesc">감정 분석 테스트</div>
+                        <a href="/work-style/" class="related-card" style="--card-color: #3498db">
+                            <span class="related-emoji">💼</span>
+                            <span class="related-name" data-i18n="related.workStyle">Work Style</span>
+                        </a>
+                        <a href="/mbti-coffee/" class="related-card" style="--card-color: #8B4513">
+                            <span class="related-emoji">☕</span>
+                            <span class="related-name" data-i18n="related.mbtiCoffee">MBTI Coffee</span>
+                        </a>
+                        <a href="/brain-type/" class="related-card" style="--card-color: #9b59b6">
+                            <span class="related-emoji">🧠</span>
+                            <span class="related-name" data-i18n="related.brainType">Brain Type</span>
                         </a>
                     </div>
                 </div>
@@ -352,17 +358,7 @@
     <script src="js/mbti-data.js" defer></script>
     <script src="js/app.js" defer></script>
 
-    <!-- SEO Internal Links -->
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tests</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/mbti-love/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💕 MBTI Love</a>
-        <a href="/mbti-coffee/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">☕ MBTI Coffee</a>
-        <a href="/mbti-city/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🏙️ MBTI City</a>
-        <a href="/work-style/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💼 Work Style</a>
-        <a href="/brain-type/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🧠 Brain Type</a>
-      </div>
-    </section>
+
 
     <script src="/portal/js/cross-promo.js" defer></script>
 </body>

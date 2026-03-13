@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "私のMBTI職業相性"
+  },
+  "result": {
+    "moreTests": "もっとテストを探す"
+  },
+  "related": {
+    "mbtiLove": "MBTI恋愛",
+    "workStyle": "ワークスタイル",
+    "mbtiCoffee": "MBTIコーヒー",
+    "brainType": "脳タイプ"
   }
 }

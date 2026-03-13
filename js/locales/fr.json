@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "Ma Compatibilité de Carrière MBTI"
+  },
+  "result": {
+    "moreTests": "Découvrir plus de tests"
+  },
+  "related": {
+    "mbtiLove": "MBTI Amour",
+    "workStyle": "Style de travail",
+    "mbtiCoffee": "MBTI Café",
+    "brainType": "Type de cerveau"
   }
 }

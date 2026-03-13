@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "Benim MBTI Kariyer Uyumluluğum"
+  },
+  "result": {
+    "moreTests": "Daha fazla test keşfet"
+  },
+  "related": {
+    "mbtiLove": "MBTI Aşk",
+    "workStyle": "Çalışma Stili",
+    "mbtiCoffee": "MBTI Kahve",
+    "brainType": "Beyin Tipi"
   }
 }

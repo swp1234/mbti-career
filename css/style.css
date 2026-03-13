@@ -929,6 +929,16 @@ body {
     flex: 1;
 }
 
+/* Related Tests 2x2 Grid */
+.related-tests { width: 100%; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); }
+.related-tests h3 { font-size: 16px; color: var(--text-secondary); margin-bottom: 12px; text-align: center; }
+.related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.related-tests .related-card { min-height: auto; padding: 14px 8px; }
+.related-emoji { font-size: 28px; }
+.related-tests .related-name { font-size: 12px; }
+.percentile-stat { text-align: center; margin: 16px 0 0; font-size: 13px; color: var(--text-secondary); }
+.percentile-stat strong { color: var(--theme-accent); font-size: 15px; }
+
 /* Related Apps Section */
 .related-section {
     background: var(--bg-secondary);

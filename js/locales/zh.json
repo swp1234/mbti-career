@@ -189,5 +189,14 @@
   },
   "share": {
     "text": "我的MBTI职业匹配"
+  },
+  "result": {
+    "moreTests": "探索更多测试"
+  },
+  "related": {
+    "mbtiLove": "MBTI恋爱",
+    "workStyle": "工作风格",
+    "mbtiCoffee": "MBTI咖啡",
+    "brainType": "大脑类型"
   }
 }
